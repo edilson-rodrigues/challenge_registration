@@ -1,5 +1,5 @@
-import 'package:challenge_registration/app/core/core.dart';
 import 'package:flutter/material.dart';
+import '../../../app/core/core.dart';
 
 class ButtonWidget extends StatelessWidget {
   final String label;
@@ -17,6 +17,7 @@ class ButtonWidget extends StatelessWidget {
     required this.onPressed,
   }) : super(key: key);
 
+  //button primary
   ButtonWidget.primary({
     required String label,
     required VoidCallback onPressed,
@@ -28,6 +29,7 @@ class ButtonWidget extends StatelessWidget {
         overlayColor = AppColors.blueShade[10]!,
         label = label;
 
+  // create button type secondary
   ButtonWidget.secondary({
     required String label,
     required VoidCallback onPressed,
@@ -39,6 +41,7 @@ class ButtonWidget extends StatelessWidget {
         overlayColor = AppColors.cyanShade[20]!,
         label = label;
 
+  // create button type transparent
   ButtonWidget.transparent({
     required String label,
     required VoidCallback onPressed,

@@ -1,24 +1,24 @@
-import 'package:challenge_registration/app/modules/login/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import '../../../../../app/modules/login/login_controller.dart';
 
 class FormController {
   final _formKey = GlobalKey<FormState>();
+  GlobalKey<FormState> get formLoginKey => _formKey;
 
-  GlobalKey<FormState> get formKey => _formKey;
+  String? _userInput;
+  String? _passwordInput;
 
-  final _userInputNotifier = ValueNotifier<String>('');
-  final _passwordInputNotifier = ValueNotifier<String>('');
-
-  void userOnChange(String value) => _userInputNotifier.value = value;
-
-  void passwordOnChange(String value) => _passwordInputNotifier.value = value;
+  void userOnChange(String value) => _userInput = value;
+  void passwordOnChange(String value) => _passwordInput = value;
 
   LoginController loginController = Modular.get();
 
+  // case inputs isValid
+  // send values inputs controller login
   void submit() async {
     if (_formKey.currentState!.validate()) {
-      var auth = [_userInputNotifier.value, _passwordInputNotifier.value];
+      var auth = [_userInput, _passwordInput];
       loginController.loginWithPasswordUser(auth);
     }
   }

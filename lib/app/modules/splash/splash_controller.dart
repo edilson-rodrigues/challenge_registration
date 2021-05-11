@@ -1,5 +1,5 @@
-import 'package:challenge_registration/app/shared/auth/auth_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import '../../../app/shared/auth/auth_controller.dart';
 
 class SplashController {
   final AuthController authController = Modular.get();

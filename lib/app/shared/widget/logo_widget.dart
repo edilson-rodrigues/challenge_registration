@@ -1,6 +1,6 @@
-import 'package:challenge_registration/app/core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../app/core/core.dart';
 
 class LogoWidget extends StatelessWidget {
   @override

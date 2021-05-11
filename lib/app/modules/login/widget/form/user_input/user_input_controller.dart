@@ -1,5 +1,5 @@
 class UserInputController {
-  // validator do textformfield - password
+  // validator textformfield - user input
   String? validator(String? value) {
     if (value == null || value.isEmpty) {
       return 'Preencha o seu login.';

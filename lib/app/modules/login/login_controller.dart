@@ -1,6 +1,5 @@
-import 'package:challenge_registration/app/shared/auth/auth_controller.dart';
-import 'package:challenge_registration/app/shared/shared.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import '../../../app/shared/shared.dart';
 
 class LoginController {
   AuthController authController = Modular.get();
@@ -10,7 +9,7 @@ class LoginController {
     var isValid = await authController.loginWithPasswordUser(auth);
     if (isValid) {
       await sharedLocalStorageServices.put('auth', auth);
-      await Modular.to.pushReplacementNamed('/home/');
+      await Modular.to.pushReplacementNamed('/product/');
     }
   }
 }

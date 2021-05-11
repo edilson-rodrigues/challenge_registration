@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-
-import 'package:challenge_registration/app/shared/shared.dart';
 import 'logo_animation_controller.dart';
+import '../../../../app/shared/shared.dart';
 
 class LogoAnimationWidget extends StatefulWidget {
   @override
@@ -14,6 +13,7 @@ class _LogoAnimationWidgetState
     with TickerProviderStateMixin {
   @override
   void initState() {
+    // init animation logo
     controller.animation(this);
     super.initState();
   }
