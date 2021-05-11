@@ -16,6 +16,8 @@ dependencies:
  flutter_modular: ^3.2.0
  google_fonts: ^2.0.0
  shared_preferences: ^2.0.5
+ brasil_fields: ^1.1.2
+ intl: ^0.17.0
 
 dev_dependencies:
  pedantic: ^1.11.0
