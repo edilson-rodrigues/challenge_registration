@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../../../../../app/core/core.dart';
-import '../../../../../../app/modules/login/widget/form/user_input/user_input_controller.dart';
+
+import 'package:challenge_registration/app/core/core.dart';
+import 'package:challenge_registration/app/modules/login/widget/form/user_input/user_input_controller.dart';
+
 
 class UserInputWidget extends StatelessWidget {
   final ValueChanged<String>? onChanged;

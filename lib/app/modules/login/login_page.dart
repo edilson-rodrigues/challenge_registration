@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import 'package:challenge_registration/app/modules/login/login_controller.dart';
+import 'package:challenge_registration/app/modules/login/widget/submit/submit_widget.dart';
+import 'package:challenge_registration/app/modules/login/widget/top/top_widget.dart';
 import 'widget/bottom/bottom_widget.dart';
 import 'widget/form/form_widget.dart';
-import '../../../app/modules/login/login_controller.dart';
-import '../../../app/modules/login/widget/submit/submit_widget.dart';
-import '../../../app/modules/login/widget/top/top_widget.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);

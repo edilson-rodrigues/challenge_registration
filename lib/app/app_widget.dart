@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'core/theme/app_theme.dart';
+
+import 'package:challenge_registration/app/core/core.dart';
 
 class AppWidget extends StatelessWidget {
   @override

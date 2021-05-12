@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'repositories/auth_repository_interface.dart';
-import '../shared.dart';
+import '../services/local_storage_service/local_storage_service_interface.dart';
 
 class AuthController {
   final IAuthRepository _authRepository = Modular.get();
@@ -15,6 +15,7 @@ class AuthController {
     var localAuth = await _iLocalStorage.get('auth');
 
     try {
+      // validate
       await _authRepository.loginWithPasswordUser(localAuth).then((isValid) => {
             if (isValid)
               {

@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
 
 class PasswordController {
-  // state resposability to show password in input and change icon visibility
+  // estado responsavel pra exibir a senha no input e trocar o icon
   final isVisibilityNotifier = ValueNotifier<bool>(true);
 
   bool get isVisibility => isVisibilityNotifier.value;
 
   set isVisibility(bool value) => isVisibilityNotifier.value = value;
 
-  // validator textformfield - password
+  // validator do textformfield - password
   String? validator(String? value) {
     if (value == null || value.isEmpty) {
       return 'Preencha a senha.';

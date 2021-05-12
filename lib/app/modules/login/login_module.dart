@@ -1,9 +1,10 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../../app/modules/login/login_Page.dart';
-import '../../../app/modules/login/login_controller.dart';
-import '../../../app/shared/auth/auth_controller.dart';
-import '../../../app/shared/auth/repositories/auth_repository.dart';
-import '../../../app/shared/auth/repositories/auth_repository_interface.dart';
+
+import 'package:challenge_registration/app/modules/login/login_Page.dart';
+import 'package:challenge_registration/app/modules/login/login_controller.dart';
+import 'package:challenge_registration/app/shared/auth/auth_controller.dart';
+import 'package:challenge_registration/app/shared/auth/repositories/auth_repository.dart';
+import 'package:challenge_registration/app/shared/auth/repositories/auth_repository_interface.dart';
 import 'widget/form/form_controller.dart';
 import 'widget/form/password_input/password_controller.dart';
 import 'widget/form/user_input/user_input_controller.dart';

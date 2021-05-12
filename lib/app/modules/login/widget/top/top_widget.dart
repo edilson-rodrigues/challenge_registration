@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../../app/core/core.dart';
-import '../../../../../app/shared/shared.dart';
+
+import 'package:challenge_registration/app/core/core.dart';
+import 'package:challenge_registration/app/shared/shared.dart';
 
 class TopWidget extends PreferredSize {
   TopWidget(BuildContext context)

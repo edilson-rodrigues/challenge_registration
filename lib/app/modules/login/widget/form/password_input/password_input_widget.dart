@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../../../../../app/modules/login/widget/form/password_input/password_controller.dart';
-import '../../../../../../app/core/core.dart';
+
+import 'package:challenge_registration/app/core/core.dart';
+import 'package:challenge_registration/app/modules/login/widget/form/password_input/password_controller.dart';
 
 class PasswordInputWidget extends StatelessWidget {
   final ValueChanged<String>? onChanged;
