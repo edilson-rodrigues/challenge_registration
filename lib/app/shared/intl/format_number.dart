@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 class FormatNumber {
   // return price format br 1.000,00 , remove substring BRL
   String currency(double value) {
-    return NumberFormat.currency(locale: 'pt').format(value).substring(3);
+    return NumberFormat.currency(locale: 'pt').format(value).substring(4);
   }
 
   // return date format pt_br 11/05/2021
