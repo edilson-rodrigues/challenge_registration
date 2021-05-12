@@ -1,4 +1,4 @@
-package dev.edarodrigs.registration.challenge_registration
+package com.example.challenge_registration
 
 import io.flutter.embedding.android.FlutterActivity
 

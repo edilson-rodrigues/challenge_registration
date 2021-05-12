@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.edarodrigs.registration.challenge_registration">
+    package="com.example.challenge_registration">
    <application
         android:label="challenge_registration"
         android:icon="@mipmap/ic_launcher">
