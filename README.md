@@ -63,6 +63,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 ```
 
+### login e senha 123456
+
 ---
 
 ## Screens
