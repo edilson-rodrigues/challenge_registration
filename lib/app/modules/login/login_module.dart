@@ -12,7 +12,7 @@ import 'widget/form/user_input/user_input_controller.dart';
 class LoginModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => LoginController()),
+    Bind.lazySingleton((i) => LoginController(i(), i())),
     Bind<IAuthRepository>((i) => AuthRepository()),
     Bind((i) => AuthController(i(), i())),
     Bind((i) => UserInputController()),
