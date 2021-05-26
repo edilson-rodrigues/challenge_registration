@@ -14,7 +14,7 @@ class LoginModule extends Module {
   final List<Bind> binds = [
     Bind.lazySingleton((i) => LoginController()),
     Bind<IAuthRepository>((i) => AuthRepository()),
-    Bind((i) => AuthController()),
+    Bind((i) => AuthController(i(), i())),
     Bind((i) => UserInputController()),
     Bind((i) => PasswordController()),
     Bind((i) => FormController()),

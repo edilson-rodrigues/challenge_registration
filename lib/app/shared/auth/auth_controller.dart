@@ -3,8 +3,10 @@ import 'repositories/auth_repository_interface.dart';
 import '../services/local_storage_service/local_storage_service_interface.dart';
 
 class AuthController {
-  final IAuthRepository _authRepository = Modular.get();
-  final ILocalStorage _iLocalStorage = Modular.get();
+  final IAuthRepository _authRepository;
+  final ILocalStorage _iLocalStorage;
+
+  AuthController(this._authRepository, this._iLocalStorage);
 
   Future<bool> loginWithPasswordUser(List<dynamic> auth) async {
     return await _authRepository.loginWithPasswordUser(auth);

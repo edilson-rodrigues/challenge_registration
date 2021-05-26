@@ -11,7 +11,7 @@ class SplashModule extends Module {
     Bind((i) => SplashController()),
     Bind((i) => LogoAnimationController()),
     Bind<IAuthRepository>((i) => AuthRepository()),
-    Bind((i) => AuthController()),
+    Bind((i) => AuthController(i(), i())),
   ];
 
   @override
