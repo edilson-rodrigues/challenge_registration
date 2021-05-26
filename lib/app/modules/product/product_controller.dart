@@ -1,7 +1,6 @@
 import 'package:challenge_registration/app/modules/product/product_repository_interface.dart';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'widget/product_filter/product_filter_state.dart';
 
 import '../../../app/modules/product/models/product_model.dart';
@@ -10,7 +9,9 @@ import '../../../app/modules/product/models/product_model.dart';
 class ProductController extends ChangeNotifier {
   List<ProductModel> productList = [];
 
-  final IProductRepository productRepository = Modular.get();
+  final IProductRepository productRepository;
+
+  ProductController(this.productRepository);
 
   void setProductLocalStorage() async {
     await productRepository.setProductLocalStorage(productList);

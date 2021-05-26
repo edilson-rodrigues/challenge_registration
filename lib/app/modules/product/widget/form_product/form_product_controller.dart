@@ -1,14 +1,17 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 import 'package:challenge_registration/app/modules/product/models/product_model.dart';
 import 'package:challenge_registration/app/modules/product/product_controller.dart';
 import 'package:challenge_registration/app/shared/intl/format_number.dart';
 
-
 class FormProductController {
+// get controller to send(submit) values ProductModel
+  final ProductController productController;
+
+  FormProductController(this.productController);
+
   // key form products
   final _formKey = GlobalKey<FormState>();
 
@@ -49,10 +52,7 @@ class FormProductController {
     }
   }
 
-  // get controller to send(submit) values ProductModel
-  final ProductController productController = Modular.get();
-
-  Future<void> register() async{
+  Future<void> register() async {
     if (_formKey.currentState!.validate()) {
       // create new product
       productController.setProduct(

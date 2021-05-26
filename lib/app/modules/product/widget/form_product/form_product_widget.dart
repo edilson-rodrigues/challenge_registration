@@ -5,12 +5,16 @@ import '../../../../../app/core/core.dart';
 import '../../../../../app/shared/shared.dart';
 import 'form_product_controller.dart';
 
-class FormProduct extends StatelessWidget {
+class FormProduct extends StatefulWidget {
   final int? tagHero;
   FormProduct({Key? key, this.tagHero}) : super(key: key);
 
-  final FormProductController controller = Modular.get();
+  @override
+  _FormProductState createState() => _FormProductState();
+}
 
+class _FormProductState
+    extends ModularState<FormProduct, FormProductController> {
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -18,7 +22,7 @@ class FormProduct extends StatelessWidget {
       child: ListView(
         children: [
           Hero(
-            tag: '$tagHero',
+            tag: '${widget.tagHero}',
             child: Image.asset(
               AppImages.defaultImage,
               height: 300,

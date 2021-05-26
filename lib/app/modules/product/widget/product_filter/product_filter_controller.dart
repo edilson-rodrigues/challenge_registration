@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-
 import '../../../../../app/modules/product/product_controller.dart';
 import 'product_filter_state.dart';
 
 class ProductFilterController extends ChangeNotifier {
+  // set values on selected
+  final ProductController productController;
   // state dropdown value selected;
   late ProductOrderState dropdownValue = ProductOrderState.asc;
 
@@ -18,8 +18,7 @@ class ProductFilterController extends ChangeNotifier {
     ProductOrderState.dateDesc,
   ];
 
-  // set values on selected
-  final ProductController productController = Modular.get();
+  ProductFilterController(this.productController);
 
   void Function(ProductOrderState?)? onChanged(ProductOrderState? newValue) {
     dropdownValue = newValue!;

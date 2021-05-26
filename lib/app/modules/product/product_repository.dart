@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:challenge_registration/app/shared/services/local_storage_service/local_storage_service.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 import 'models/product_model.dart';
 import 'product_repository_interface.dart';
 
 class ProductRepository implements IProductRepository {
-  SharedLocalStorageServices sharedLocalStorageServices = Modular.get();
+  SharedLocalStorageServices sharedLocalStorageServices;
+  ProductRepository(this.sharedLocalStorageServices);
 
   @override
   Future<void> setProductLocalStorage(List<ProductModel> products) async {

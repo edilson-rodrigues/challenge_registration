@@ -13,10 +13,10 @@ import '../../../app/modules/product/product_page.dart';
 class ProductModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind((i) => ProductController()),
-    Bind((i) => ProductFilterController()),
-    Bind((i) => FormProductController()),
-    Bind<IProductRepository>((i) => ProductRepository()),
+    Bind((i) => ProductController(i())),
+    Bind((i) => ProductFilterController(i())),
+    Bind((i) => FormProductController(i())),
+    Bind<IProductRepository>((i) => ProductRepository(i())),
   ];
 
   @override
