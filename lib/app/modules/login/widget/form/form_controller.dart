@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-
 import 'package:challenge_registration/app/modules/login/login_controller.dart';
 
 class FormController {
+  LoginController loginController;
+  FormController(this.loginController);
+
   final _formKey = GlobalKey<FormState>();
 
   GlobalKey<FormState> get formKey => _formKey;
@@ -14,8 +15,6 @@ class FormController {
   void userOnChange(String value) => _userInput = value;
 
   void passwordOnChange(String value) => _passwordInput = value;
-
-  LoginController loginController = Modular.get();
 
   Future<void> submit() async {
     if (_formKey.currentState!.validate()) {

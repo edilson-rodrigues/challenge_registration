@@ -17,7 +17,7 @@ class LoginModule extends Module {
     Bind((i) => AuthController(i(), i())),
     Bind((i) => UserInputController()),
     Bind((i) => PasswordController()),
-    Bind((i) => FormController()),
+    Bind((i) => FormController(i())),
   ];
 
   @override

@@ -3,14 +3,17 @@ import 'package:challenge_registration/app/shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class SubmitWidget extends StatelessWidget {
-  final state = Modular.get<FormController>();
+class SubmitWidget extends StatefulWidget {
+  @override
+  _SubmitWidgetState createState() => _SubmitWidgetState();
+}
 
+class _SubmitWidgetState extends ModularState<SubmitWidget, FormController> {
   @override
   Widget build(BuildContext context) {
     return ButtonWidget.primary(
       label: 'Login',
-      onPressed: () => state.submit(),
+      onPressed: () => controller.submit(),
     );
   }
 }

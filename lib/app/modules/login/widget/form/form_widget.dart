@@ -6,22 +6,26 @@ import 'package:challenge_registration/app/modules/login/widget/form/form_contro
 import 'password_input/password_input_widget.dart';
 import 'user_input/user_input_widget.dart';
 
-class FormWidget extends StatelessWidget {
-  final state = Modular.get<FormController>();
+class FormWidget extends StatefulWidget {
+  @override
+  _FormWidgetState createState() => _FormWidgetState();
+}
+
+class _FormWidgetState extends ModularState<FormWidget, FormController> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: state.formKey,
+      key: controller.formKey,
       child: Column(
         children: [
           UserInputWidget(
-            onChanged: state.userOnChange,
+            onChanged: controller.userOnChange,
           ),
           SizedBox(
             height: 20,
           ),
           PasswordInputWidget(
-            onChanged: state.passwordOnChange,
+            onChanged: controller.passwordOnChange,
           ),
         ],
       ),

@@ -5,13 +5,17 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:challenge_registration/app/core/core.dart';
 import 'package:challenge_registration/app/modules/login/widget/form/user_input/user_input_controller.dart';
 
-
-class UserInputWidget extends StatelessWidget {
+class UserInputWidget extends StatefulWidget {
   final ValueChanged<String>? onChanged;
 
   UserInputWidget({Key? key, required this.onChanged}) : super(key: key);
-  final state = Modular.get<UserInputController>();
 
+  @override
+  _UserInputWidgetState createState() => _UserInputWidgetState();
+}
+
+class _UserInputWidgetState
+    extends ModularState<UserInputWidget, UserInputController> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -19,8 +23,8 @@ class UserInputWidget extends StatelessWidget {
         color: AppColors.blueShade,
         fontWeight: FontWeight.w700,
       ),
-      validator: state.validator,
-      onChanged: onChanged,
+      validator: controller.validator,
+      onChanged: widget.onChanged,
       inputFormatters: [
         LengthLimitingTextInputFormatter(32),
       ],
