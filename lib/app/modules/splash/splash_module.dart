@@ -8,7 +8,7 @@ import 'package:challenge_registration/app/shared/shared.dart';
 class SplashModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind((i) => SplashController()),
+    Bind((i) => SplashController(i())),
     Bind((i) => LogoAnimationController()),
     Bind<IAuthRepository>((i) => AuthRepository()),
     Bind((i) => AuthController(i(), i())),
